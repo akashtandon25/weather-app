@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 .App {
   text-align: center;
 }
@@ -27,6 +31,123 @@
 .App-link {
   color: #61dafb;
 }
+
+.InterfaceForm {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.InputField {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  flex: 6;
+  margin-left: 20px;
+  height: 30px;
+}
+
+.SubmitButton {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  flex: 1;
+  margin-right: 40px;
+  margin-left: 30px;
+  height: 45px;
+}
+
+.SubmitButton:hover {
+  background-color: #0056b3;
+}
+.NavbarBackground{
+  display: flex;
+  flex: 2;
+  border: 1px solid #000; 
+  border-radius: 5px;
+  background-color: #0056b3; 
+  margin: 30px;
+  margin-right: 20px;
+  margin-top: 0px;
+  padding: 4px;
+  padding-right: 5px;
+  justify-content: space-between;
+}
+
+.NavbarLink{
+  flex: 1;
+  color: white;
+  text-align: center;
+}
+
+.Home{
+  display: block;
+  width: 800px;
+  align-self: center;
+  margin: 100px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  background-color: rgb(104, 183, 159);
+  padding: 50px;
+  border-radius: 50px;
+}
+
+.HomeImage{
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+}
+
+.HomeRow1{
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  padding: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.HomeRow2{
+  display: flex;
+  border-radius: 20px;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.TempDiv1{
+  display: block;
+  width: 100px;
+  align-items: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.FontDiv{
+  font-size: 20px;
+  margin: 5px;
+}
+
+.WeatherImage{
+  height: 20px;
+  width: 20px;
+}
+
 
 @keyframes App-logo-spin {
   from {
