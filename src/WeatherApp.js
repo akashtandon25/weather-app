@@ -2,15 +2,17 @@ import React, { useState, createContext } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./Navbar";
-import { Home } from "./pages/home";
+import { Home } from "./pages/home-states/home";
 import { Recents } from "./pages/recents";
 import { About } from "./pages/about";
 
 export const appContext= createContext();
 function WeatherApp() {
   const [weatherData, setWeatherData] = useState(null);
+  const [isLoading, setIsLoading]= useState(false);
+  const [isError, setIsError]= useState(null);
   return (
-    <appContext.Provider value={{weatherData,setWeatherData}}>
+    <appContext.Provider value={{weatherData,setWeatherData,isLoading,setIsLoading,isError,setIsError}}>
       <Router>
         <Navbar />
         <Routes>
