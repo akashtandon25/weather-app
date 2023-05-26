@@ -17,7 +17,7 @@ export const Navbar= ()=>{
         if (input !== "") {
           try {
             const res = await axios.get(
-              `http://api.weatherapi.com/v1/search.json?key=c91dbfd7a30c4ec4b41184835232005&q=${input}`
+              `https://api.weatherapi.com/v1/search.json?key=c91dbfd7a30c4ec4b41184835232005&q=${input}`
             );
             setOptions(res.data);
             setIsError(null);
