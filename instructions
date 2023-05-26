@@ -1,0 +1,16 @@
+This project has been created using react and tailwind-css.
+
+To run the project, make sure you have the latest version of npm and react installed. 
+Make sure you have all the dependencies installed mentioned in the package.json file. 
+To double check, open the terminal in the project directory and run npm install.
+Once all dependencies are installed, run npm start.
+
+This project includes all the funcnalities mentioned in the requirements mail. It fetches weather data from https://www.weatherapi.com.
+It includes auto-complete funcnality and handles loading and error states as well.
+
+Please note that there are loads of improvemets that I wish to do with the UI as well as adding of other feathers such as linking to firestore that 
+could store all the weather information from past searches. This is not the final website and I will keep on making improvements to it.
+
+
+
+
