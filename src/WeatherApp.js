@@ -1,9 +1,10 @@
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import axios from 'axios';
 import { Navbar } from "./Navbar";
 import { Home } from "./pages/home-states/home";
-import { Recents } from "./pages/recents";
+import { Recents } from "./pages/recents/recents";
 import { About } from "./pages/about";
 
 export const appContext= createContext();
@@ -11,6 +12,21 @@ function WeatherApp() {
   const [weatherData, setWeatherData] = useState(null);
   const [isLoading, setIsLoading]= useState(false);
   const [isError, setIsError]= useState(null);
+
+  useEffect(()=>{
+    if(weatherData){
+      const addToDb= async ()=>{
+        try{
+          const res= await axios.post('http://localhost:8000/store-data',weatherData);
+          console.log(res);
+        }
+        catch(error){
+          console.log(error);
+        }
+      }
+      addToDb();
+    }
+  },[weatherData]);
   return (
     <appContext.Provider value={{weatherData,setWeatherData,isLoading,setIsLoading,isError,setIsError}}>
       <Router>
